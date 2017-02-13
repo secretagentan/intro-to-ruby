@@ -137,10 +137,3 @@ numbers.select { |n| n.even? }
 sum = (1..10).to_a.select { |n| n.even? }
         .map { |n| n * 2 }
         .reduce(:+)
-
-
-
-
-
-
-
