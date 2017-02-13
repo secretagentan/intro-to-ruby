@@ -5,7 +5,6 @@
 - Can we set variables?
 - How to set/use variables? 
 - How to test? (i.e. console.log())
-    - 
 - What are some similarities? (to JavaScript)
 - What are benefits to using this language? (vs. JS)
 - What are some libraries to make it easier to use? 
@@ -19,7 +18,7 @@
 
 ### Class:
 - Is it function or object-oriented? 
-    - Ruby is object-oriented (everything is an object)
+    - Ruby is object-oriented (_**everything is an object**_)
 - What kinds of data structures are there?
     - Arrays, objects, strings, variables, etc. 
 - What's the syntax for importing/exporting files/libraries?
@@ -62,3 +61,4 @@
         - Pry: Colored Output
 - Where are the docs? 
     - ruby-doc.org
+- Can you do fizzbuzz?
