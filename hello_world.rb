@@ -40,15 +40,15 @@ user = { :name => "Harry" }
 # this is a hash with 1.9 syntax
 
 # data types: " .class "
-  # 1.class => Fixnum
-  # [].class => Array
-  # {}.class => Hash
+1.class #=> Fixnum
+[].class #=> Array
+{}.class #=> Hash
 
 # .+ is a method
-  # 2.+(2) => 4
+2.+(2) #=> 4
 
 # .object_id
-  # => returns that object's id
+  #=> returns that object's id
 
 # write a method
 def say_name(name)
@@ -59,7 +59,7 @@ end
 ary = Array.new # => []
 
 # any? => true or false
-a = [12,3]
+a = [1, 2, 3]
 a.push(4) if a.any?
 
 # .map vs. .map! (! = bang operator = changes the status)
@@ -106,4 +106,41 @@ def fizzbuzz(n)
     end
   end
 end
+
+# write a method that takes an array of numbers
+a = [1,2,3,4,5,6,7,8,9,10]
+
+def math(ary)
+  # filters the even numbers
+  ary.select! { |n| n % 2 == 0 }
+  # doubles the numbers
+  ary.map! { |n| n*2 }
+  # sums those numbers
+  ary.reduce(:+)
+  # return the sum
+end
+math(a)
+#=> 60
+
+# class solution
+numbers = [1,2,3,4,5,6,7,8,9,10]
+evens = numbers.select { |n| n.even? }
+doubles = evens.map { |n| n*2 }
+sum = doubles.reduce { |a, b| a + b }
+
+# chain the operators
+numbers.select { |n| n.even? }
+        .map { |n| n * 2 }
+        .reduce { |a,b| a + b }
+
+# range (1..10).to_a
+sum = (1..10).to_a.select { |n| n.even? }
+        .map { |n| n * 2 }
+        .reduce(:+)
+
+
+
+
+
+
 
