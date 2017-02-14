@@ -119,8 +119,7 @@ def math(ary)
   ary.reduce(:+)
   # return the sum
 end
-math(a)
-#=> 60
+math(a)  #=> 60
 
 # class solution
 numbers = [1,2,3,4,5,6,7,8,9,10]
@@ -137,4 +136,34 @@ numbers.select { |n| n.even? }
 sum = (1..10).to_a.select { |n| n.even? }
         .map { |n| n * 2 }
         .reduce(:+)
+
+# .respond_to?() => does this work with this
+"$4.50".respond_to?(:split)
+
+# .uniq
+[1,2,3,3].uniq  #=> [1,2,3]
+
+# .shuffle
+[1,2,3,4].shuffle!  #=> shuffles the array
+
+# scope
+name = 'An'
+
+def change_name(new_name)
+  name = new_name
+end
+
+change_name('Sam')
+puts name
+
+# instance variable: @variable
+name = 'Mochi'
+
+def change(new_name)
+  @name = new_name
+end
+
+change('Mochow')
+puts @name
+
 
